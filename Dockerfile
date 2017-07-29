@@ -17,6 +17,7 @@ RUN mkdir /var/www/newznab/
 RUN svn co --username $nn_user --password $nn_pass svn://svn.newznab.com/nn/branches/nnplus /var/www/newznab/
 RUN chmod 777 /var/www/newznab/www/lib/smarty/templates_c && \
 chmod 777 /var/www/newznab/www/covers/movies && \
+chmod 777 /var/www/newznab/www/covers/tv && \
 chmod 777 /var/www/newznab/www/covers/anime  && \
 chmod 777 /var/www/newznab/www/covers/music  && \
 chmod 777 /var/www/newznab/www  && \
