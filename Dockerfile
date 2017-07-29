@@ -1,4 +1,4 @@
-FROM ubuntu:latest 
+FROM ubuntu:trusty 
 MAINTAINER cameron Meindl <cmeindl@gmail.com>
 #install the Pre Reqs and Apache
 RUN apt-get update && apt-get -yq install php5 php5-dev php-pear php5-gd php5-mysql php5-curl mysql-client-5.5 libmysqlclient-dev \
@@ -8,7 +8,7 @@ RUN apt-get update && apt-get -yq install php5 php5-dev php-pear php5-gd php5-my
 
 ENV nn_user user 
 ENV nn_pass password
-ENV php_timezone Australia/Sydney 
+ENV php_timezone Europe/Berlin 
 ENV path /:/var/www/html/www/
 # add the Config to Apache
 ADD ./newznab.conf /etc/apache2/sites-available/newznab.conf
